@@ -4,7 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppMaterialModule } from './app-material.module';
 
 @NgModule({
-  imports: [],
+  imports: [AppMaterialModule, CommonModule, ReactiveFormsModule],
   exports: [AppMaterialModule, CommonModule, ReactiveFormsModule],
 })
 export class SharedModule {}
