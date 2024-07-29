@@ -1,3 +1,110 @@
 <mat-toolbar>
-  <span style="color: #fff;">Sneakers Store</span>
+  <div class="header-wrapper">
+    <div class="logo-container">
+      <div class="menu-mobile">
+        <button
+          mat-icon-button
+          (click)="animationMenuNavBarMobile('0rem', '1')"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+        <div class="dropdown-content">
+          <div class="header-menu-mobile">
+            <h3>Sneakers Store</h3>
+            <button
+              mat-icon-button
+              (click)="animationMenuNavBarMobile('-50rem', '0')"
+            >
+              <mat-icon>cancel</mat-icon>
+            </button>
+          </div>
+
+          <div class="content-menu-mobile">
+            <div
+              *ngFor="let navMenu of navMenuArray"
+              class="menu-content-mobile"
+            >
+              <div class="content-option-mobile">
+                <h4>{{ navMenu.option }}</h4>
+                <button
+                  *ngIf="navMenu.option != 'PROMOÇÕES'"
+                  class="btn-option-mobile-{{ navMenu.option }}"
+                  mat-icon-button
+                  (click)="openOptionNavBarMobile(navMenu.option)"
+                >
+                  <mat-icon>keyboard_arrow_right</mat-icon>
+                </button>
+              </div>
+              <div
+                class="content-values-mobile content-mobile-{{
+                  navMenu.option
+                }}"
+              >
+                <span *ngFor="let value of navMenu.values">{{ value }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-menu-mobile">
+            <div class="footer-content-mobile">
+              <button mat-icon-button>
+                <mat-icon>person_outline</mat-icon>
+                <span>MINHA CONTA</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span style="margin: 0 auto">Sneakers Store</span>
+    </div>
+
+    <div class="search-container">
+      <form>
+        <div class="input-wrapper">
+          <input
+            type="text"
+            [(ngModel)]="searchValue"
+            [ngModelOptions]="{ standalone: true }"
+            (click)="
+              searchValue == 'O que você deseja?'
+                ? (searchValue = '')
+                : (searchValue = searchValue)
+            "
+            (focusout)="
+              searchValue.length == 0
+                ? (searchValue = 'O que você deseja?')
+                : (searchValue = searchValue)
+            "
+          />
+          <button mat-icon-button>
+            <mat-icon>search</mat-icon>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="buttons-container">
+      <button mat-icon-button>
+        <mat-icon>person_outline</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <div class="navbar-main">
+    <div class="navbar-dropdown">
+      <div
+        class="dropdown-option"
+        (mouseenter)="openDropDown(navMenu.option)"
+        *ngFor="let navMenu of navMenuArray"
+      >
+        <a href="#">
+          {{ navMenu.option }}
+        </a>
+        <div class="dropdown-content content-{{ navMenu.option }}"></div>
+      </div>
+    </div>
+  </div>
 </mat-toolbar>
