@@ -1,0 +1,56 @@
+.sneaker-container {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sneaker-title {
+  padding-bottom: 2rem;
+}
+
+.sneaker-title h3 {
+  font-weight: 800;
+}
+
+.sneaker-box-wrapper {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.sneaker-box {
+  color: #000;
+}
+
+.sneaker-box-img {
+  height: 30rem;
+  width: 30rem;
+}
+
+.sneaker-box-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.sneaker-box-description {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.sneaker-box-description :nth-child(1) {
+  font-size: 4vh;
+}
+
+.sneaker-box-description :nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,23 @@
+<div class="sneaker-container">
+  <div class="sneaker-title">
+    <h1>PRODUTOS</h1>
+  </div>
+
+  <div class="sneaker-box-wrapper">
+    @for(sneaker of sneakersList; track sneaker) {
+    <div class="sneaker-box">
+      <div class="sneaker-box-img">
+        <img src="{{ sneaker.url }}" />
+      </div>
+      <div class="sneaker-box-description">
+        <span>{{ sneaker.name }}</span>
+        <span>
+          R${{ sneaker.price }},00
+          <span style="font-size: 16px;">no pix</span>
+          <span>ou em até 12x de R$26,87</span>
+        </span>
+      </div>
+    </div>
+    }
+  </div>
+</div>

@@ -20,10 +20,8 @@
           </div>
 
           <div class="content-menu-mobile">
-            <div
-              *ngFor="let navMenu of navMenuArray"
-              class="menu-content-mobile"
-            >
+            @for(navMenu of navMenuArray; track navMenu) {
+            <div class="menu-content-mobile">
               <div class="content-option-mobile">
                 <h4>{{ navMenu.option }}</h4>
                 <button
@@ -40,9 +38,12 @@
                   navMenu.option
                 }}"
               >
-                <span *ngFor="let value of navMenu.values">{{ value }}</span>
+                @for(value of navMenu.values; track value) {
+                <span>{{ value }}</span>
+                }
               </div>
             </div>
+            }
           </div>
 
           <div class="footer-menu-mobile">
@@ -95,16 +96,14 @@
 
   <div class="navbar-main">
     <div class="navbar-dropdown">
-      <div
-        class="dropdown-option"
-        (mouseenter)="openDropDown(navMenu.option)"
-        *ngFor="let navMenu of navMenuArray"
-      >
+      @for(navMenu of navMenuArray; track navMenu) {
+      <div class="dropdown-option" (mouseenter)="openDropDown(navMenu.option)">
         <a href="#">
           {{ navMenu.option }}
         </a>
         <div class="dropdown-content content-{{ navMenu.option }}"></div>
       </div>
+      }
     </div>
   </div>
 </mat-toolbar>
