@@ -23,8 +23,6 @@ export class HeaderComponent {
     },
   ];
 
-  searchValue = 'O que você deseja?';
-
   constructor(private renderer: Renderer2) {}
 
   animationMenuNavBarMobile(left: string, opacity: string) {

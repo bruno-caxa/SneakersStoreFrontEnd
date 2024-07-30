@@ -169,12 +169,14 @@ mat-toolbar {
 
 .content-option-mobile h4 {
   cursor: pointer;
+  font-weight: 800;
 }
 
 .content-values-mobile {
   display: none;
   flex-direction: column;
   gap: 3rem;
+  font-weight: 600;
   margin-top: 2rem;
   width: 100%;
 }
@@ -209,6 +211,10 @@ mat-toolbar {
 .footer-content-mobile button,
 .footer-content-mobile button span {
   margin-left: 2rem;
+}
+
+.footer-content-mobile span {
+  font-weight: 800;
 }
 
 @media (max-width: 700px) {

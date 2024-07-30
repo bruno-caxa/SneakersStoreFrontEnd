@@ -62,21 +62,7 @@
     <div class="search-container">
       <form>
         <div class="input-wrapper">
-          <input
-            type="text"
-            [(ngModel)]="searchValue"
-            [ngModelOptions]="{ standalone: true }"
-            (click)="
-              searchValue == 'O que você deseja?'
-                ? (searchValue = '')
-                : (searchValue = searchValue)
-            "
-            (focusout)="
-              searchValue.length == 0
-                ? (searchValue = 'O que você deseja?')
-                : (searchValue = searchValue)
-            "
-          />
+          <input type="text" placeholder="O que você deseja?" />
           <button mat-icon-button>
             <mat-icon>search</mat-icon>
           </button>
