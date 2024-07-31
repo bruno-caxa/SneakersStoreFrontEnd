@@ -1,3 +1,14 @@
 .mat-toolbar.mat-primary {
   background: #000;
 }
+
+.content-wrapper {
+  padding-top: 25rem;
+  background-color: #000;
+}
+
+@media (max-width: 700px) {
+  .content-wrapper {
+    padding-top: 15rem;
+  }
+}
