@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { PaginatorComponent } from "../paginator/paginator.component";
 
 @Component({
   selector: 'app-sneakers-list',
   standalone: true,
-  imports: [],
+  imports: [PaginatorComponent],
   templateUrl: './sneakers-list.component.html',
   styleUrl: './sneakers-list.component.scss',
 })
