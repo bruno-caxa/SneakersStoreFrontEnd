@@ -9,48 +9,53 @@
   padding-bottom: 2rem;
 }
 
-.sneaker-title h3 {
+.sneaker-title h1 {
   font-weight: 800;
 }
 
-.sneaker-box-wrapper {
+.sneaker-gallery-wrapper {
   background-color: #fff;
+  color: #000;
+  padding-top: 2rem;
+}
+
+.sneaker-gallery {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  padding: 2rem 0;
-  width: 100%;
-}
-
-.sneaker-box {
-  color: #000;
-}
-
-.sneaker-box-img {
-  height: 30rem;
-  width: 30rem;
-}
-
-.sneaker-box-img img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.sneaker-box-description {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  margin-bottom: 2rem;
   padding: 1rem;
 }
 
-.sneaker-box-description :nth-child(1) {
-  font-size: 4vh;
-}
+.sneaker-gallery-item {
+  img {
+    object-fit: cover;
+    height: 40rem;
+    max-width: 25rem;
+    vertical-align: middle;
+    aspect-ratio: 2 / 2;
+  }
 
-.sneaker-box-description :nth-child(2) {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  figcaption {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+
+    :nth-child(1) {
+      font-size: 4vh;
+      font-weight: 700;
+    }
+
+    :nth-child(2) {
+      font-size: 3vh;
+      font-weight: 900;
+    }
+
+    span {
+      font-family: "Lato", sans-serif;
+    }
+  }
 }
