@@ -20,19 +20,18 @@
 }
 
 .sneaker-gallery {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   margin-bottom: 2rem;
   padding: 1rem;
 }
 
 .sneaker-gallery-item {
+  padding: 1rem;
+
   img {
     object-fit: cover;
-    height: 40rem;
-    max-width: 25rem;
+    width: 100%;
     vertical-align: middle;
     aspect-ratio: 2 / 2;
   }
